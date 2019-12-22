@@ -45,6 +45,11 @@ This implementation requires the following dependencies (tested on Ubuntu 16.04.
 
 1. Modify the kinematics of the arm or TCP position (link6) by changing `xarm6_robot.dae` respectively. You can find a description of the OpenRave XML file format [here](http://openrave.programmingvision.com/wiki/index.php/Format:XML).
 
+You can use ROS collada_urdf to convert from URDF to COLLADA DAE:
+'''
+rosrun collada_urdf collada_urdf xarm6_robot.urdf xarm6_robot.dae
+'''
+
 1. (Optional) Debug the kinematics using OpenRave's viewer:
     ```shell
     openrave xarm6_robot.dae
